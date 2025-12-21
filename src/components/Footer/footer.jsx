@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
     return (
@@ -20,7 +20,7 @@ function Footer() {
                 <div className="footer-column">
                     <h3>Connect</h3>
                     <div className="social-icons">
-                        <a href="https://x.com/MichaelAyere"><FontAwesomeIcon icon={faTwitter} /></a>
+                        <a href="https://x.com/MichaelAyere"><FontAwesomeIcon icon={faXTwitter} /></a>
                         <a href="https://t.me/progress_ayere"><FontAwesomeIcon icon={faTelegram} /></a>
                         <a href="http://linkedIn.com/in/progress-ayere-2b2a19271"><FontAwesomeIcon icon={faLinkedin} /></a>
                         <a href="https://github.com/ProgressAyere"><FontAwesomeIcon icon={faGithub} /></a>
