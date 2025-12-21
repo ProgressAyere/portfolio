@@ -2,42 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/my-nft.JPG" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Progress Ayere - Blockchain Educator, Smart Contract Developer & Web3 Community Builder. Explore my projects, certifications, and contributions to the Web3 ecosystem." />
+    <meta name="keywords" content="Progress Ayere, Blockchain Developer, Web3, Smart Contracts, Cryptocurrency, Blockchain Education, Community Builder, Portfolio" />
+    <meta name="author" content="Progress Ayere" />
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Progress Ayere - Blockchain Developer & Web3 Educator" />
+    <meta property="og:description" content="Blockchain Educator, Smart Contract Developer & Web3 Community Builder. 500+ Students Reached, 10+ Events Hosted." />
+    <meta property="og:image" content="%PUBLIC_URL%/my-nft.JPG" />
+    <meta property="og:url" content="https://progressayere.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Progress Ayere Portfolio" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Progress Ayere - Blockchain Developer & Web3 Educator" />
+    <meta name="twitter:description" content="Blockchain Educator, Smart Contract Developer & Web3 Community Builder. 500+ Students Reached, 10+ Events Hosted." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/my-nft.JPG" />
+    <meta name="twitter:creator" content="@MichaelAyere" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/my-nft.JPG" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/my-nft.JPG" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Manifest for PWA -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Progress Ayere",
+      "jobTitle": "Blockchain Developer & Web3 Educator",
+      "description": "Blockchain Educator, Smart Contract Developer & Web3 Community Builder",
+      "image": "%PUBLIC_URL%/my-nft.JPG",
+      "url": "https://progressayere.com",
+      "sameAs": [
+        "https://x.com/MichaelAyere",
+        "https://linkedin.com/in/progress-ayere-2b2a19271",
+        "https://github.com/ProgressAyere",
+        "https://t.me/progress_ayere"
+      ],
+      "knowsAbout": ["Blockchain Technology", "Smart Contracts", "Web3", "Cryptocurrency", "Community Building"],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Various Blockchain Certification Programs"
+      }
+    }
+    </script>
+    
+    <title>Progress Ayere - Blockchain Developer & Web3 Educator Portfolio</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>This application requires JavaScript to run. Please enable JavaScript in your browser settings and refresh the page.</p>
+        <p>You can also visit my social media profiles:</p>
+        <a href="https://x.com/MichaelAyere" target="_blank">Twitter</a> | 
+        <a href="https://linkedin.com/in/progress-ayere-2b2a19271" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/ProgressAyere" target="_blank">GitHub</a>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -1,0 +1,134 @@
+header {
+    padding: 14px 0;
+    border-bottom: 1px solid #334155;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+
+h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00aced;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: #3b82f6;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #1a1d29;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav.nav-open {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    .btn-link {
+        width: calc(100% - 20px);
+        max-width: 200px;
+        text-align: center;
+        margin: 10px auto 0;
+        padding: 10px 16px;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+    }
+}

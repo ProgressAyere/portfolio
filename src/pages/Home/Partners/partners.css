@@ -1,0 +1,59 @@
+.fourth-section {
+    padding: 60px 0;
+}
+
+.collabs {
+    color: #3b82f6;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.logo-track {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 15s linear infinite;
+}
+
+.logo-item {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .fourth-section {
+        padding: 40px 0;
+    }
+
+    .collabs {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    .logo-track {
+        gap: 2rem;
+    }
+
+    .logo-item {
+        width: 200px;
+    }
+}
