@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAward, faShield, faCode, faUsers, faCamera, faExternalLinkAlt, faVideo, faCoins, faPalette, faTools } from '@fortawesome/free-solid-svg-icons';
 import './projects.css';
+import CallToAction from '../../components/CallToAction/CallToAction.jsx';
 
 function Projects() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -329,6 +330,7 @@ function Projects() {
                     </div>
                 </section>
 
+                <CallToAction currentPage="projects" />
             </main>
         </>
     );

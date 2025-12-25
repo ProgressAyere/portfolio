@@ -46,7 +46,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #00aced;
+    color: #3b82f6;
+}
+
+nav a.active-link {
+    color: #3b82f6 !important;
 }
 
 .btn {
@@ -60,6 +64,30 @@ nav a:hover {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: block;
+}
+
+body.light-mode .theme-toggle {
+    color: black;
+}
+
+.theme-toggle:hover {
+    color: #3b82f6;
 }
 
 
@@ -82,9 +110,17 @@ nav a:hover {
     font-size: 15px;
     text-decoration: none;
     color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-link:hover {
+    background-color: #2563eb;
+    color: white !important;
+    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
+
     .hamburger {
         display: block;
     }
@@ -98,6 +134,18 @@ nav a:hover {
         background-color: #1a1d29;
         transition: right 0.3s ease;
         z-index: 1000;
+    }
+
+    body.light-mode nav {
+        background-color: white;
+    }
+
+    body.light-mode nav a {
+        color: black !important;
+    }
+
+    body.light-mode nav a.active-link {
+        color: #3b82f6 !important;
     }
 
     nav.nav-open {

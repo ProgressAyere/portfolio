@@ -30,7 +30,7 @@ footer {
 
 .footer-column ul li a {
     text-decoration: none;
-    color: #ccc;
+    color: #3b82f6;
     transition: color 0.3s ease;
 }
 
@@ -49,7 +49,7 @@ footer {
 }
 
 .social-icons a {
-    color: #fff;
+    color: #3b82f6;
     font-size: 20px;
     transition: color 0.3s ease;
 }

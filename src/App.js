@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/header.jsx';
 import Footer from './components/Footer/footer.jsx';
+import BackToTop from './components/BackToTop/BackToTop.jsx';
 import Home from './pages/Home/home.js';
 import About from './pages/About/about.jsx';
 import Projects from './pages/Projects/projects.jsx';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );

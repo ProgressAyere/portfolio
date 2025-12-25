@@ -2,8 +2,9 @@ import React from 'react';
 import './about.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldAlt, faUsers, faVideo, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { faEthereum, faHtml5, faCss3Alt, faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { faEthereum, faHtml5, faCss3Alt, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import profileImage from '../../assets/images/profile.png';
+import CallToAction from '../../components/CallToAction/CallToAction.jsx';
 
 function About() {
     return (
@@ -92,9 +93,20 @@ function About() {
                                                     <span>JavaScript</span>
                                                 </div>
                                                 <div className="progress-bar">
-                                                    <div className="progress-fill" style={{width: "90%"}}></div>
+                                                    <div className="progress-fill" style={{width: "80%"}}></div>
                                                 </div>
-                                                <span className="percentage">90%</span>
+                                                <span className="percentage">80%</span>
+                                            </div>
+
+                                            <div className="skill-item">
+                                                <div className="skill-header">
+                                                    <FontAwesomeIcon icon={faReact} />
+                                                    <span>React</span>
+                                                </div>
+                                                <div className="progress-bar">
+                                                    <div className="progress-fill" style={{width: "89%"}}></div>
+                                                </div>
+                                                <span className="percentage">89%</span>
                                             </div>
 
                                             <div className="skill-item">
@@ -134,6 +146,7 @@ function About() {
                     </div>
                 </div>
             </section>
+            <CallToAction currentPage="about" />
         </main>
     );
 }

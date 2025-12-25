@@ -8,6 +8,7 @@
 .head-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .head-image-text {
@@ -60,6 +61,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    padding: 0 10px;
 }
 
 .photo-highlight {
@@ -148,6 +150,12 @@
     margin-top: 2rem;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+
 .skills-title {
     color: #3b82f6;
     font-size: 1.8rem;
@@ -222,19 +230,28 @@
         padding: 60px 0;
     }
 
+    .head-container {
+        padding: 0 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
     .head-image-text {
         flex-direction: column;
         gap: 2rem;
         align-items: center;
+        padding: 1rem 0;
     }
 
     .left-content {
         flex: 0 0 auto;
         width: 100%;
+        padding: 0 10px;
     }
 
     .right-content {
         max-width: 100%;
+        padding: 0 10px;
     }
 
     .image-milestone-container {
@@ -242,8 +259,9 @@
     }
 
     .head-image {
-        max-width: 300px;
-        height: 300px;
+        max-width: 250px;
+        height: 250px;
+        min-width: 200px;
     }
 
     .photo-highlight {
@@ -253,48 +271,133 @@
 
     .milestones-list {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
     }
 
     .tag {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
     .head-text {
         text-align: center;
+        padding: 0 5px;
     }
 
     .head-text p {
         text-align: left;
+        font-size: 0.9rem;
+        padding: 0 5px;
     }
 
     .button-group {
         justify-content: center;
+        padding: 0 10px;
     }
 
     .second-btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         justify-content: center;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     .skills-section {
-        padding: 30px 0;
+        padding: 30px 10px;
     }
 
     .skills-title {
         font-size: 1.5rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 2rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .skill-item {
+        align-items: flex-start;
+        text-align: left;
     }
 
     .skill-header {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skill-header span {
+        text-align: left;
+    }
+
+    .percentage {
+        align-self: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 375px) {
+    .head-container {
+        padding: 0 15px;
+    }
+
+    .skills-section {
+        padding: 20px 5px;
+    }
+
+    .skills-grid {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .head-container {
+        padding: 0 10px;
+    }
+
+    .head-image {
+        max-width: 200px;
+        height: 200px;
+        min-width: 180px;
+    }
+
+    .tag {
+        font-size: 1.3rem;
+    }
+
+    .head-text p {
+        font-size: 0.85rem;
+    }
+
+    .second-btn {
+        max-width: 200px;
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .skills-section {
+        padding: 20px 0px;
+    }
+
+    .skills-grid {
+        padding: 0 5px;
+        gap: 1rem;
+    }
+
+    .skill-header {
+        font-size: 0.8rem;
+    }
+
+    .skill-header span {
+        font-size: 0.9rem;
+    }
+
+    .percentage {
+        font-size: 0.8rem;
     }
 }
