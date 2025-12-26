@@ -6,7 +6,7 @@ import { faGraduationCap, faCode, faUsers } from '@fortawesome/free-solid-svg-ic
 function Services() {
     return (
         <section className="second-section">
-            <div className="container">
+            <div className="containers">
                 <h2 className="subhead">What I Do</h2>
                 <div className="second-wrapper">
                     <div className="second-container">

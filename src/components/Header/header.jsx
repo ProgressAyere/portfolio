@@ -27,7 +27,7 @@ function Header() {
     
     return (
         <header>
-            <div className="container header-container">
+            <div className="containers header-container">
                 <div className="logo-name-container">
                     <img src={nftImage} alt="Progress' NFT" className="logo" />
                     <h2>Progress Ayere</h2>

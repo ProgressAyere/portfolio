@@ -42,7 +42,7 @@ function Stats() {
 
     return (
         <section className="third-section" ref={sectionRef}>
-            <div className="container third-container">
+            <div className="contain third-container">
                 <div className="third-wrapper slide-from-left">
                     <h4>500+</h4>
                     <p>Students Reached</p>

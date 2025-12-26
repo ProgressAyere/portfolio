@@ -16,8 +16,8 @@ function Hero() {
                             <h1>Empowering the Future through Blockchain & Innovation</h1>
                             <p className="highlights1">Blockchain Educator | Smart Contract Developer | Web3 Community Builder</p>
                             <div className="button-group">
-                                <button className="mainbtn first-btn" onClick={() => navigate('/projects')}>Explore My Work</button>
-                                <button className="mainbtn second-btn" onClick={() => window.location.href = 'mailto:ayereprogress2@gmail.com'}>Contact Me</button>
+                                <button className="mainbtn explore-btn" onClick={() => navigate('/projects')}>Explore My Work</button>
+                                <button className="mainbtn contact-btn" onClick={() => window.location.href = 'mailto:ayereprogress2@gmail.com'}>Contact Me</button>
                             </div>
                         </div>
                     </div>

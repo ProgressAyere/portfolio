@@ -1,20 +1,23 @@
 .hero-section {
-    padding: 100px 0;
-    min-height: calc(100vh - 80px);
+    padding: 60px 0 60px 0;
+    min-height: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .hero-image-text {
     display: flex;
     align-items: center;
     gap: 4rem;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
 }
 
 .hero-image {
@@ -47,7 +50,7 @@ h1 {
 
 .button-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     align-items: flex-start;
 }
@@ -59,27 +62,25 @@ h1 {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 180px;
-    text-align: center;
 }
 
-.first-btn {
+.explore-btn {
     background-color: #3b82f6;
     color: white;
     border: none;
 }
 
-.second-btn {
+.contact-btn {
     background: transparent;
     color: greenyellow;
     border: 2px solid greenyellow;
 }
 
-.first-btn:hover {
+.explore-btn:hover {
     background-color: #2563eb;
 }
 
-.second-btn:hover {
+.contact-btn:hover {
     background-color: #3b82f6;
     color: white;
 }
@@ -87,6 +88,7 @@ h1 {
 @media (max-width: 768px) {
     .hero-section {
         padding: 60px 0;
+        min-height: auto;
     }
 
     .hero-container {
