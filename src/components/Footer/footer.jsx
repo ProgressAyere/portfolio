@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faTelegram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
+
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer>
             <div className="footer-container">
@@ -33,7 +36,7 @@ function Footer() {
             </div>
             <div className="footer-bottom">
                 <hr />
-                <p>&copy; 2025 Progress Ayere — Built for Web3 Impact</p>
+                <p>&copy; {currentYear} Progress Ayere — Built for Web3 Impact</p>
             </div>
         </footer>
     );
