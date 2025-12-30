@@ -733,6 +733,10 @@ body.light-mode .mobile-slideshow {
     .highlights-grid {
         grid-template-columns: 1fr;
     }
+
+    .highlights {
+        transition: transform 0.3s ease-out;
+    }
     
     .photo-grid {
         display: none;

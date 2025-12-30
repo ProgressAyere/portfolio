@@ -62,6 +62,33 @@ function Projects() {
     useEffect(() => {
         if (!isMobile) return;
 
+        const handleScroll = () => {
+            const certItems = document.querySelectorAll('.highlights');
+            certItems.forEach((item) => {
+                const rect = item.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const itemCenter = rect.top + rect.height / 2;
+                const viewportCenter = windowHeight / 2;
+                const distance = Math.abs(viewportCenter - itemCenter);
+                const maxDistance = windowHeight / 2;
+                
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    const scale = 1 + (1 - Math.min(distance / maxDistance, 1)) * 0.2;
+                    item.style.transform = `scale(${scale})`;
+                } else {
+                    item.style.transform = 'scale(1)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isMobile]);
+
+    useEffect(() => {
+        if (!isMobile) return;
+
         let interval = null;
 
         const observer = new IntersectionObserver(

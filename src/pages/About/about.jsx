@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './about.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldAlt, faUsers, faVideo, faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,32 @@ import profileImage from '../../assets/images/profile.png';
 import CallToAction from '../../components/CallToAction/CallToAction.jsx';
 
 function About() {
+    const leftContentRef = useRef(null);
+    const rightContentRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerWidth <= 768 && leftContentRef.current && rightContentRef.current) {
+                const scrollY = window.scrollY;
+                const triggerPoint = 200;
+                
+                if (scrollY > triggerPoint) {
+                    const progress = Math.min((scrollY - triggerPoint) / 300, 1);
+                    leftContentRef.current.style.setProperty('--scroll-progress', progress);
+                    leftContentRef.current.classList.add('parallax-effect');
+                    rightContentRef.current.classList.add('slide-up');
+                } else {
+                    leftContentRef.current.style.setProperty('--scroll-progress', 0);
+                    leftContentRef.current.classList.remove('parallax-effect');
+                    rightContentRef.current.classList.remove('slide-up');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <main>
             {/* Section 1 - About Introduction */}
@@ -15,7 +41,7 @@ function About() {
                     <div className="head-content-wrapper">
                         <div className="head-image-text">
                             {/* Left Content - Image and Milestones */}
-                            <div className="left-content">
+                            <div className="left-content" ref={leftContentRef}>
                                 <div className="image-milestone-container">
                                     <img src={profileImage} alt="It is the CEO" className="head-image" />
                                     <h3 className="photo-highlight">Milestones</h3>
@@ -37,7 +63,7 @@ function About() {
                             </div>
 
                             {/* Right Content - Text and Skills */}
-                            <div className="right-content">
+                            <div className="right-content" ref={rightContentRef}>
                                 <div className="head-text">
                                     <h2 className="tag">Who is Progress Ayere?</h2>
                                     <p>As the Founder and Educator at Blockchain on Campus (BCC), my journey is fueled by a passion for demystifying Web3. I thrive on simplifying complex blockchain concepts, hosting engaging events, and creating educational animations that make the decentralized world accessible to all. My ultimate goal is to evolve into a proficient Smart Contract Auditor, ensuring the security and integrity of the future's digital infrastructure.</p>
