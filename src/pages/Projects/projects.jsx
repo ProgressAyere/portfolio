@@ -1,13 +1,22 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAward, faShield, faCode, faUsers, faCamera, faExternalLinkAlt, faVideo, faCoins, faPalette, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faShield, faCode, faUsers, faCamera, faExternalLinkAlt, faVideo, faCoins, faPalette, faTools, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './projects.css';
 import CallToAction from '../../components/CallToAction/CallToAction.jsx';
 
 function Projects() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [bccSlide, setBccSlide] = useState(0);
     const slideShowRef = useRef(null);
+    const bccSlideRef = useRef(null);
+
+    const bccMedia = useMemo(() => [
+        { type: 'video', src: require('../../assets/projects/BCC/BCC video1.mp4'), duration: null },
+        { type: 'image', src: require('../../assets/projects/BCC/1.png'), duration: 5000 },
+        { type: 'image', src: require('../../assets/projects/BCC/2.png'), duration: 5000 },
+        { type: 'image', src: require('../../assets/projects/BCC/3.png'), duration: 5000 }
+    ], []);
 
     const slides = [
         { 
@@ -117,6 +126,29 @@ function Projects() {
         };
     }, [isMobile, slides.length]);
 
+    useEffect(() => {
+        const currentMedia = bccMedia[bccSlide];
+        
+        if (currentMedia.type === 'image') {
+            const interval = setInterval(() => {
+                setBccSlide((prev) => (prev + 1) % bccMedia.length);
+            }, currentMedia.duration);
+            return () => clearInterval(interval);
+        }
+    }, [bccSlide, bccMedia]);
+
+    const handleVideoEnd = () => {
+        setBccSlide((prev) => (prev + 1) % bccMedia.length);
+    };
+
+    const nextBccSlide = () => {
+        setBccSlide((prev) => (prev + 1) % bccMedia.length);
+    };
+
+    const prevBccSlide = () => {
+        setBccSlide((prev) => (prev - 1 + bccMedia.length) % bccMedia.length);
+    };
+
     return (
         <>
             <main>
@@ -161,6 +193,56 @@ function Projects() {
                                 <div className="head-image-description">
                                     <span>Active in Web3</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="project-showcase">
+                    <div className="project-container">
+                        <div className="project-header">
+                            <span className="project-role">My Projects</span>
+                            <h2>Blockchain on Campus (BCC) Website</h2>
+                            <p>Educational platform designed to simplify blockchain education for students and newcomers to Web3, providing clear resources and community engagement content.</p>
+                        </div>
+                        <div className="project-content">
+                            <div className="project-media" ref={bccSlideRef}>
+                                {bccMedia.map((media, index) => (
+                                    <div key={index} className={`project-slide ${index === bccSlide ? 'active' : ''}`}>
+                                        {media.type === 'video' ? (
+                                            <video className="project-video" muted autoPlay playsInline onEnded={handleVideoEnd} key={index} ref={(el) => { if (el) el.playbackRate = 1.25; }}>
+                                                <source src={media.src} type="video/mp4" />
+                                            </video>
+                                        ) : (
+                                            <img src={media.src} alt={`BCC Screenshot ${index}`} className="project-image" loading="lazy" />
+                                        )}
+                                    </div>
+                                ))}
+                                <button className="slide-nav prev" onClick={prevBccSlide} aria-label="Previous slide">
+                                    <FontAwesomeIcon icon={faChevronLeft} />
+                                </button>
+                                <button className="slide-nav next" onClick={nextBccSlide} aria-label="Next slide">
+                                    <FontAwesomeIcon icon={faChevronRight} />
+                                </button>
+                                <div className="tech-grid">
+                                    <div className="tech-logo" title="React">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                                        <span className="tech-name">React</span>
+                                    </div>
+                                    <div className="tech-logo" title="Tailwind CSS">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+                                        <span className="tech-name">Tailwind CSS</span>
+                                    </div>
+                                    <div className="tech-logo" title="Vercel">
+                                        <svg viewBox="0 0 256 222" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M128 0C57.308 0 0 57.307 0 128c0 70.696 57.307 128 128 128 70.696 0 128-57.307 128-128C256 57.314 198.689.007 128 0Zm0 214.886c-47.94 0-86.886-38.946-86.886-86.886S80.06 41.114 128 41.114s86.886 38.946 86.886 86.886-38.946 86.886-86.886 86.886Z"/><circle cx="128" cy="128" r="50" fill="#000"/></svg>
+                                        <span className="tech-name">Vercel</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-details">
+                                <a href="https://bcc-yct.vercel.app" target="_blank" rel="noopener noreferrer" className="project-cta">
+                                    View Live Site <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
                             </div>
                         </div>
                     </div>
