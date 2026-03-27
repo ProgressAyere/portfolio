@@ -262,17 +262,31 @@ function Projects() {
                             {[
                                 { 
                                     icon: faCode, 
+                                    title: 'React Native', 
+                                    org: 'Meta Brains', 
+                                    year: '2026', 
+                                    link: 'https://drive.google.com/file/d/1GcMoABBpQaOSHu3dJqs29iI40amz6mSq/view?usp=sharing' 
+                                },
+                                {
+                                    icon: faCode, 
+                                    title: 'Complete Front-End Web Development', 
+                                    org: 'Neamat Andishmand & Neamatullah Ekheteyari', 
+                                    year: '2025', 
+                                    link: 'https://drive.google.com/file/d/19ryytLJTvT1cA_wvABPu3_6Rqg_Ztffc/view?usp=sharing'
+                                },
+                                {
+                                    icon: faCode, 
                                     title: 'Responsive Web Design', 
                                     org: 'FreeCodeCamp', 
                                     year: '2024', 
                                     link: 'https://drive.google.com/file/d/1Yadz9p_Hn7wGP6BjHGa_idur_KwWjAu9/view?usp=sharing' 
                                 },
                                 { 
-                                    icon: faCoins, 
-                                    title: 'Crypto Beginners Course', 
-                                    org: 'Quidax', 
-                                    year: '2024', 
-                                    link: 'https://drive.google.com/file/d/1yvXG741fD5c3n_K6pptUqsA9u-00JkFj/view?usp=sharing' 
+                                    icon: faCode, 
+                                    title: 'Hashgraph Developer Course', 
+                                    org: 'The Hashgraph Association', 
+                                    year: '2025', 
+                                    link: 'https://drive.google.com/file/d/1SuZldgzVqKOtV3hX_UVGR0XRY_8Z42wf/view?usp=sharing' 
                                 },
                                 { 
                                     icon: faShield, 
@@ -280,6 +294,20 @@ function Projects() {
                                     org: 'Cyber Twinkle', 
                                     year: '2025', 
                                     link: 'https://drive.google.com/file/d/1NDDFdaJkg1sp3sKFJn0IMG5VGX36GHFt/view?usp=sharing' 
+                                },
+                                { 
+                                    icon: faTools, 
+                                    title: 'Hackers Toolkit', 
+                                    org: 'Frank Anemaet', 
+                                    year: '2025', 
+                                    link: 'https://drive.google.com/file/d/1PSAXbTebFZSZGE4Zqm-J5fnHkveX7Hwl/view?usp=sharing' 
+                                },
+                                { 
+                                    icon: faCoins, 
+                                    title: 'Crypto Beginners Course', 
+                                    org: 'Quidax', 
+                                    year: '2024', 
+                                    link: 'https://drive.google.com/file/d/1yvXG741fD5c3n_K6pptUqsA9u-00JkFj/view?usp=sharing' 
                                 },
                                 { 
                                     icon: faVideo, 
@@ -296,25 +324,11 @@ function Projects() {
                                     link: 'https://drive.google.com/file/d/1eCPivR2YhGecslnzSegF3ejI6-j_QaiD/view?usp=sharing' 
                                 },
                                 { 
-                                    icon: faCode, 
-                                    title: 'Hashgraph Developer Course', 
-                                    org: 'The Hashgraph Association', 
-                                    year: '2025', 
-                                    link: 'https://drive.google.com/file/d/1SuZldgzVqKOtV3hX_UVGR0XRY_8Z42wf/view?usp=sharing' 
-                                },
-                                { 
                                     icon: faPalette, 
                                     title: 'Character Creation with AI', 
                                     org: 'CC AI Academy', 
                                     year: '2025', 
                                     link: 'https://drive.google.com/file/d/1PVfl-Z1S2qFYimgPNQlA_3jfhVym8njJ/view?usp=sharing' 
-                                },
-                                { 
-                                    icon: faTools, 
-                                    title: 'Hackers Toolkit', 
-                                    org: 'Frank Anemaet', 
-                                    year: '2025', 
-                                    link: 'https://drive.google.com/file/d/1PSAXbTebFZSZGE4Zqm-J5fnHkveX7Hwl/view?usp=sharing' 
                                 },
                                 { 
                                     icon: faPalette, 
