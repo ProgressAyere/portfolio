@@ -288,6 +288,13 @@ function Projects() {
                                     year: '2025', 
                                     link: 'https://drive.google.com/file/d/1SuZldgzVqKOtV3hX_UVGR0XRY_8Z42wf/view?usp=sharing' 
                                 },
+                                {
+                                    icon: faCode,
+                                    title: 'Claude 101',
+                                    org: 'Anthropic',
+                                    year: '2026',
+                                    link: 'https://drive.google.com/file/d/1z_RgnjbZZ5gi8tE6EvhsIzZqPECFG38P/view?usp=sharing'
+                                },
                                 { 
                                     icon: faShield, 
                                     title: 'Web Hacking For Beginners', 
