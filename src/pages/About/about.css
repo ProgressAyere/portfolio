@@ -157,72 +157,135 @@
 }
 
 .skills-title {
-    color: #3b82f6;
+    color: white;
     font-size: 1.8rem;
     margin-bottom: 3rem;
     text-align: left;
 }
 
+.tech-stack-highlight {
+    background: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
+    max-width: 100%;
 }
 
-.skill-item {
+.skill-box {
+    background: rgba(30, 41, 59, 0.6);
+    border: 2px solid rgba(100, 116, 139, 0.4);
+    border-radius: 16px;
+    padding: 1.2rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 100px;
 }
 
-.skill-item.full-width {
-    grid-column: 1 / -1;
+.skill-box:hover {
+    border-color: rgba(100, 116, 139, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.skill-header {
+.skill-icon {
+    font-size: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.skill-box span {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Individual icon colors matching original branding */
+.html-icon {
+    color: #E34F26;
+}
+
+.css-icon {
+    color: #1572B6;
+}
+
+.js-icon {
+    color: #F7DF1E;
+}
+
+.react-icon {
+    color: #61DAFB;
+}
+
+.node-icon {
+    color: #339933;
+}
+
+.solidity-icon {
+    color: #627EEA;
+}
+
+.auditing-icon {
+    color: #10B981;
+}
+
+.community-icon {
+    color: #8B5CF6;
+}
+
+.content-icon {
+    color: #F59E0B;
+}
+
+.typescript-icon {
+    color: #3178C6;
+}
+
+.tailwind-icon {
+    color: #06B6D4;
+}
+
+.sql-icon {
+    color: #4479A1;
+}
+
+.nextjs-icon {
+    background: white;
+    color: black;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 6px;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: #3b82f6;
-    font-size: 1.2rem;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.skill-header span {
+.framer-icon {
+    background: linear-gradient(to bottom right, #0055FF, #00AAFF);
     color: white;
-    font-size: 1rem;
-}
-
-.learning-badge {
-    background-color: #22c55e;
-    color: black;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-left: auto;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #1e293b;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background-color: greenyellow;
-    border-radius: 4px;
-    transition: width 0.3s ease;
-}
-
-.percentage {
-    color: white;
-    font-size: 0.9rem;
-    align-self: flex-end;
-    margin-top: 0.25rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -331,35 +394,28 @@
 
     .skills-title {
         font-size: 1.5rem;
-        text-align: left;
+        text-align: center;
         margin-bottom: 2rem;
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
         padding: 0 10px;
     }
 
-    .skill-item {
-        align-items: flex-start;
-        text-align: left;
+    .skill-box {
+        padding: 1.2rem 0.8rem;
     }
 
-    .skill-header {
+    .skill-icon {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .skill-box span {
         font-size: 0.9rem;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-    }
-
-    .skill-header span {
-        text-align: left;
-    }
-
-    .percentage {
-        align-self: flex-start;
-        text-align: left;
     }
 }
 
@@ -374,6 +430,11 @@
 
     .skills-grid {
         padding: 0 5px;
+        gap: 0.8rem;
+    }
+
+    .skill-box {
+        padding: 1rem 0.6rem;
     }
 }
 
@@ -408,18 +469,20 @@
 
     .skills-grid {
         padding: 0 5px;
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
-    .skill-header {
-        font-size: 0.8rem;
+    .skill-box {
+        padding: 1rem 0.5rem;
     }
 
-    .skill-header span {
-        font-size: 0.9rem;
+    .skill-icon {
+        font-size: 1.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
-    .percentage {
-        font-size: 0.8rem;
+    .skill-box span {
+        font-size: 0.85rem;
     }
 }
