@@ -248,6 +248,45 @@ function Projects() {
                     </div>
                 </section>
 
+                <section className="project-showcase">
+                    <div className="project-container">
+                        <div className="project-header">
+                            <h2>Ghonsi Proof</h2>
+                            <p>A blockchain-based platform and infrastructure designed to help Web3 professionals build a verifiable on-chain portfolio, creating durable proof of their contributions.</p>
+                        </div>
+                        <div className="project-content">
+                            <div className="project-media">
+                                <video className="project-video" muted autoPlay loop playsInline>
+                                    <source src={require('../../assets/projects/GhonsiProof/Ghonsipage.mp4')} type="video/mp4" />
+                                </video>
+                                <div className="tech-grid">
+                                    <div className="tech-logo" title="React">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                                        <span className="tech-name">React</span>
+                                    </div>
+                                    <div className="tech-logo" title="TypeScript">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+                                        <span className="tech-name">TypeScript</span>
+                                    </div>
+                                    <div className="tech-logo" title="JavaScript">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                                        <span className="tech-name">JavaScript</span>
+                                    </div>
+                                    <div className="tech-logo" title="CSS">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                                        <span className="tech-name">CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-details">
+                                <a href="https://ghonsiproof.com" target="_blank" rel="noopener noreferrer" className="project-cta">
+                                    View Live Site <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="mid-section">
                     <div className="mid-container">
                         <div className="mid-image-text">
